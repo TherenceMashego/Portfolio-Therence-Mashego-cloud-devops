@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="tmicon.jpg">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Futura:wght@400;700&display=swap">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+ <style>
+    /* Apply smooth transition for background color changes with a 1-second duration */
+    body,
+    .navbar,
+    footer,
+    .contact-bar {
+      transition: background-color 1s ease-in-out, color 1s ease-in-out;
+    }
+
+    /* Example dark theme styles */
+    body.dark-theme {
+      background-color: #121212;
+      color: #fff;
+    }
+
+    .navbar.dark-theme,
+    footer.dark-theme,
+    .contact-bar.dark-theme {
+      background-color: #333;
+      color: #fff;
+    }
+
+    /* Example light theme styles */
+    body.light-theme {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .navbar.light-theme,
+    footer.light-theme,
+    .contact-bar.light-theme {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* Adjust styles for footer trademark and navbar links */
+    footer.light-theme .trademark,
+    .navbar.light-theme a {
+      color: #333;
+    }
+
+    /* Adjust navbar link colors for active and non-active links */
+    .navbar a {
+      color: #000;
+    }
+
+    .navbar a:hover {
+      color: #007bff;
+    }
+
+    /* Darken navbar and footer text when light theme is active */
+    .navbar.light-theme a,
+    footer.light-theme p {
+      color: #333;
+    }
+  </style><style>
+    /* Ensure footer always has black background */
+    footer {
+      background-color: #000;
+      color: #fff;
+    }
+
+    /* This class will be used to fade in the page content */
+    .fade-in {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    body.light-theme .fade-in {
+      opacity: 1;
+    }
+
+    /* Apply smooth transition for background color changes with a 1-second duration */
+    body,
+    .navbar,
+    footer,
+    .contact-bar {
+      transition: background-color 1s ease-in-out, color 1s ease-in-out;
+    }
+
+    /* Example dark theme styles */
+    body.dark-theme {
+      background-color: #121212;
+      color: #fff;
+    }
+
+    .navbar.dark-theme,
+    .contact-bar.dark-theme {
+      background-color: #333;
+      color: #fff;
+    }
+
+    /* Example light theme styles */
+    body.light-theme {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .navbar.light-theme,
+    .contact-bar.light-theme {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* Adjust styles for footer trademark and navbar links */
+    footer.light-theme .trademark,
+    .navbar.light-theme a {
+      color: #333;
+    }
+
+    /* Adjust navbar link colors for active and non-active links */
+    .navbar a {
+      color: #000;
+    }
+
+    .navbar a:hover {
+      color: #007bff;
+    }
+
+    /* Darken navbar and footer text when light theme is active */
+    .navbar.light-theme a,
+    footer.light-theme p {
+      color: #333;
+    }
+
+    /* Ensure the theme button text remains black, regardless of the theme */
+    #theme-toggle {
+      color: black;
+    }
+
+    /* Optional: Ensure the text stays black even when hovered over */
+    #theme-toggle:hover {
+      color: black;
+    }
+  </style>
+
+
+</head>
+
+<body class="fade-in light-theme">
+
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="projects.html">Projects</a>
+      <a href="experience.html">Experience</a>
+      <button id="theme-toggle" class="theme-button">Light Theme</button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="home-section">
+      <div class="background" style="background-image: url('background.jpg'); background-size: cover; background-position: center center; background-attachment: fixed;">
+        <div class="profile-container">
+          <img src="terry.jpg" alt="Profile Picture" class="profile-picture">
+          <h1>Therence Mashego</h1>
+          <h2>Cloud Engineer | DevOps Engineer | Software Engineer | Web Developer</h2>
+          <p>Welcome to my portfolio! I’m excited to share my journey with you. On this website, you’ll discover more than just my professional achievements, you’ll also get a glimpse of my personal side. Learn about my hobbies, the moments that shaped my life. </p>
+          <p>Whether you’re curious about my professional experience, the certifications I’ve earned, the projects I’ve worked on, or the stories that define me, there’s something here for everyone. Feel free to explore by selecting one of the options: </p>
+
+          <!-- Navigation Links with separators -->
+          <div class="quick-links">
+            <a href="about.html">About Me</a> |
+            <a href="certificates.html">Certificates</a> |
+            <a href="projects.html">Projects</a> |
+            <a href="experience.html">Experience</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact Bar (common across all pages) -->
+  <section class="contact-bar">
+    <div class="contact-icons">
+      <a href="tel:0612137899" class="contact-icon" title="Call Me">
+        <i class="fas fa-phone-alt"></i>
+      </a>
+      <a href="mailto:poiterrence39@gmail.com" class="contact-icon" title="Email Me">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.google.com/maps?q=7053 Intshe Street, Windmill park, Boksburg, 1459" class="contact-icon" target="_blank" title="Find Me on Google Maps">
+        <i class="fas fa-map-marker-alt"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/therence-mashego-b8265b20b" class="contact-icon" target="_blank" title="LinkedIn Profile">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/TherenceMashego" class="contact-icon" target="_blank" title="GitHub Profile">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </section>
+
+<footer>
+  <p class="trademark">© 2024 Therence Mashego. All rights reserved.</p>
+</footer>
+
+  <script>
+    // Add event listener to toggle theme
+    const themeButton = document.getElementById('theme-toggle');
+    themeButton.addEventListener('click', () => {
+      // Toggle between dark and light theme classes
+      document.body.classList.toggle('dark-theme');
+      document.body.classList.toggle('light-theme');
+
+      const navbar = document.querySelector('.navbar');
+      const footer = document.querySelector('footer');
+      const contactBar = document.querySelector('.contact-bar');
+
+      // Update navbar, footer, and contact bar colors based on the theme
+      if (document.body.classList.contains('dark-theme')) {
+        navbar.style.backgroundColor = '#333'; 
+        footer.style.backgroundColor = '#333';
+        contactBar.style.backgroundColor = '#333'; 
+        themeButton.textContent = 'Light Theme'; 
+      } else {
+        navbar.style.backgroundColor = '#fff'; 
+        footer.style.backgroundColor = '#fff';
+        contactBar.style.backgroundColor = '#fff'; 
+        themeButton.textContent = 'Dark Theme'; 
+      }
+
+      // Store the user's theme preference in localStorage
+      const currentTheme = document.body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
+      localStorage.setItem('theme', currentTheme);
+    });
+
+    // Check for stored theme preference in localStorage
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      document.body.classList.add(storedTheme); // Apply stored theme if it exists
+    } else {
+      document.body.classList.add('light-theme'); // Default to light theme
+    }
+  </script>
+
+</body>
+
+</html>
