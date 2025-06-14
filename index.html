@@ -1,259 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="tmicon.jpg">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Futura:wght@400;700&display=swap">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
-
- <style>
-    /* Apply smooth transition for background color changes with a 1-second duration */
-    body,
-    .navbar,
-    footer,
-    .contact-bar {
-      transition: background-color 1s ease-in-out, color 1s ease-in-out;
-    }
-
-    /* Example dark theme styles */
-    body.dark-theme {
-      background-color: #121212;
-      color: #fff;
-    }
-
-    .navbar.dark-theme,
-    footer.dark-theme,
-    .contact-bar.dark-theme {
-      background-color: #333;
-      color: #fff;
-    }
-
-    /* Example light theme styles */
-    body.light-theme {
-      background-color: #fff;
-      color: #000;
-    }
-
-    .navbar.light-theme,
-    footer.light-theme,
-    .contact-bar.light-theme {
-      background-color: #fff;
-      color: #000;
-    }
-
-    /* Adjust styles for footer trademark and navbar links */
-    footer.light-theme .trademark,
-    .navbar.light-theme a {
-      color: #333;
-    }
-
-    /* Adjust navbar link colors for active and non-active links */
-    .navbar a {
-      color: #000;
-    }
-
-    .navbar a:hover {
-      color: #007bff;
-    }
-
-    /* Darken navbar and footer text when light theme is active */
-    .navbar.light-theme a,
-    footer.light-theme p {
-      color: #333;
-    }
-  </style><style>
-    /* Ensure footer always has black background */
-    footer {
-      background-color: #000;
-      color: #fff;
-    }
-
-    /* This class will be used to fade in the page content */
-    .fade-in {
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-
-    body.light-theme .fade-in {
-      opacity: 1;
-    }
-
-    /* Apply smooth transition for background color changes with a 1-second duration */
-    body,
-    .navbar,
-    footer,
-    .contact-bar {
-      transition: background-color 1s ease-in-out, color 1s ease-in-out;
-    }
-
-    /* Example dark theme styles */
-    body.dark-theme {
-      background-color: #121212;
-      color: #fff;
-    }
-
-    .navbar.dark-theme,
-    .contact-bar.dark-theme {
-      background-color: #333;
-      color: #fff;
-    }
-
-    /* Example light theme styles */
-    body.light-theme {
-      background-color: #fff;
-      color: #000;
-    }
-
-    .navbar.light-theme,
-    .contact-bar.light-theme {
-      background-color: #fff;
-      color: #000;
-    }
-
-    /* Adjust styles for footer trademark and navbar links */
-    footer.light-theme .trademark,
-    .navbar.light-theme a {
-      color: #333;
-    }
-
-    /* Adjust navbar link colors for active and non-active links */
-    .navbar a {
-      color: #000;
-    }
-
-    .navbar a:hover {
-      color: #007bff;
-    }
-
-    /* Darken navbar and footer text when light theme is active */
-    .navbar.light-theme a,
-    footer.light-theme p {
-      color: #333;
-    }
-
-    /* Ensure the theme button text remains black, regardless of the theme */
-    #theme-toggle {
-      color: black;
-    }
-
-    /* Optional: Ensure the text stays black even when hovered over */
-    #theme-toggle:hover {
-      color: black;
-    }
-  </style>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therence Mashego | Cloud & DevOps Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
-<body class="fade-in light-theme">
-
-
-  <!-- Navigation Bar -->
-  <header>
+<body>
+    <!-- Navigation -->
     <nav class="navbar">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="certificates.html">Certificates</a>
-      <a href="projects.html">Projects</a>
-      <a href="experience.html">Experience</a>
-      <button id="theme-toggle" class="theme-button">Light Theme</button>
-    </nav>
-  </header>
-
-  <!-- Main Content -->
-  <main>
-    <section class="home-section">
-      <div class="background" style="background-image: url('background.jpg'); background-size: cover; background-position: center center; background-attachment: fixed;">
-        <div class="profile-container">
-          <img src="terry.jpg" alt="Profile Picture" class="profile-picture">
-          <h1>Therence Mashego</h1>
-          <h2>Cloud Engineer | DevOps Engineer | Software Engineer | Web Developer</h2>
-          <p>Welcome to my portfolio! I’m excited to share my journey with you. On this website, you’ll discover more than just my professional achievements, you’ll also get a glimpse of my personal side. Learn about my hobbies, the moments that shaped my life. </p>
-          <p>Whether you’re curious about my professional experience, the certifications I’ve earned, the projects I’ve worked on, or the stories that define me, there’s something here for everyone. Feel free to explore by selecting one of the options: </p>
-
-          <!-- Navigation Links with separators -->
-          <div class="quick-links">
-            <a href="about.html">About Me</a> |
-            <a href="certificates.html">Certificates</a> |
-            <a href="projects.html">Projects</a> |
-            <a href="experience.html">Experience</a>
-          </div>
+        <div class="container">
+            <a href="#" class="logo">Therence<span>.</span></a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-      </div>
-    </section>
-  </main>
+    </nav>
 
-  <!-- Contact Bar (common across all pages) -->
-  <section class="contact-bar">
-    <div class="contact-icons">
-      <a href="tel:0612137899" class="contact-icon" title="Call Me">
-        <i class="fas fa-phone-alt"></i>
-      </a>
-      <a href="mailto:poiterrence39@gmail.com" class="contact-icon" title="Email Me">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a href="https://www.google.com/maps?q=7053 Intshe Street, Windmill park, Boksburg, 1459" class="contact-icon" target="_blank" title="Find Me on Google Maps">
-        <i class="fas fa-map-marker-alt"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/therence-mashego-b8265b20b" class="contact-icon" target="_blank" title="LinkedIn Profile">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/TherenceMashego" class="contact-icon" target="_blank" title="GitHub Profile">
-        <i class="fab fa-github"></i>
-      </a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Therence Mashego</h1>
+                <h2>Cloud Engineer | DevOps Engineer | Website Developer</h2>
+                <p>Building scalable cloud solutions and automating workflows to drive efficiency and innovation.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn">View Projects</a>
+                    <a href="#contact" class="btn-outline">Contact Me</a>
+                </div>
+            </div>
+            <!-- In the hero section -->
+<div class="hero-image">
+    <img src="terry.jpg" alt="Therence Mashego" class="profile-photo">
+    <div class="tech-icons">
+        <i class="fab fa-aws"></i>
+        <i class="fab fa-microsoft"></i>
+        <i class="fab fa-jenkins"></i>
+        <i class="fab fa-docker"></i>
+        <i class="fab fa-python"></i>
     </div>
-  </section>
+</div>
+        </div>
+    </section>
 
-<footer>
-  <p class="trademark">© 2024 Therence Mashego. All rights reserved.</p>
-</footer>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Personal Summary</h3>
+                     <p class="summary-tagline"><strong>AWS Certified Cloud & DevOps Engineer | Full-Stack Web Developer</strong></p>
+  
+  <p>Results-driven Cloud Engineer with <strong>3+ years of hands-on experience</strong> in designing, optimizing, and securing scalable cloud infrastructure on <strong>AWS and Azure</strong>. Proven track record in:</p>
+  
+  <div class="skills-highlights">
+    <ul>
+      <li><strong>Cloud Architecture</strong>: Deploying and managing <strong>EC2, S3, IAM, Lambda, and CloudFormation</strong> with cost-efficiency and security best practices.</li>
+      <li><strong>DevOps Automation</strong>: Building <strong>CI/CD pipelines</strong> (Jenkins, Bamboo), infrastructure as code (IaC), and monitoring solutions (CloudWatch).</li>
+      <li><strong>Web Development</strong>: Developing responsive, full-stack applications using <strong>HTML/CSS, JavaScript, Python, and modern frameworks</strong>.</li>
+    </ul>
+  </div>
 
-  <script>
-    // Add event listener to toggle theme
-    const themeButton = document.getElementById('theme-toggle');
-    themeButton.addEventListener('click', () => {
-      // Toggle between dark and light theme classes
-      document.body.classList.toggle('dark-theme');
-      document.body.classList.toggle('light-theme');
+  <p>Certified in <strong>AWS Solutions Architect, Cloud Practitioner, and Azure Fundamentals</strong>, with a <strong>Diploma in IT</strong> and <strong>NQF Level 5 in System Development</strong>. Passionate about bridging cloud engineering with agile development to deliver <strong>scalable, user-centric solutions</strong>.</p>
+                    
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <h4>Name:</h4>
+                            <p>Therence Mashego</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Contact:</h4>
+                            <p>0612137899</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Email:</h4>
+                            <p>poiterrence39@gmail.com</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Languages:</h4>
+                            <p>English, Sepedi, Xitsonga, Zulu</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Experience:</h4>
+                            <p>3 years</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder"></div>
+                </div>
+            </div>
 
-      const navbar = document.querySelector('.navbar');
-      const footer = document.querySelector('footer');
-      const contactBar = document.querySelector('.contact-bar');
+            <!-- Education -->
+            <div class="education">
+                <h3>Education</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020-2022</div>
+                        <div class="timeline-content">
+                            <h4>National Diploma in Information Technology</h4>
+                            <p>Vaal University of Technology</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023-2024</div>
+                        <div class="timeline-content">
+                            <h4>System Development NQF5</h4>
+                            <p>Mindworx Academy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      // Update navbar, footer, and contact bar colors based on the theme
-      if (document.body.classList.contains('dark-theme')) {
-        navbar.style.backgroundColor = '#333'; 
-        footer.style.backgroundColor = '#333';
-        contactBar.style.backgroundColor = '#333'; 
-        themeButton.textContent = 'Light Theme'; 
-      } else {
-        navbar.style.backgroundColor = '#fff'; 
-        footer.style.backgroundColor = '#fff';
-        contactBar.style.backgroundColor = '#fff'; 
-        themeButton.textContent = 'Dark Theme'; 
-      }
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical <span>Skills</span></h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> Cloud Platforms</h3>
+                    <ul>
+                        <li>AWS (EC2, S3, IAM, VPC, CloudFormation, CloudWatch, DynamoDB, ELB, Autoscaling)</li>
+                        <li>Azure(Azure Migrate, Azure AD)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Automation & Scripting</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>REST/SOAP APIs</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-globe"></i> Web Technologies</h3>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> DevOps Tools</h3>
+                    <ul>
+                        <li>SonarQube, Jira, Confluence</li>
+                        <li>Bamboo, Jenkins</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Database Management</h3>
+                    <ul>
+                        <li>RDS, Dynamo DB, </li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Software Development</h3>
+                    <ul>
+                        <li>VB.NET, Java</li>
+                    </ul>
+                </div>
+            </div>
 
-      // Store the user's theme preference in localStorage
-      const currentTheme = document.body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
-      localStorage.setItem('theme', currentTheme);
-    });
+            <h2 class="section-title" style="margin-top: 50px;">Soft <span>Skills</span></h2>
+            <div class="soft-skills">
+                <div class="soft-skill-item">
+                    <i class="fas fa-bullseye"></i>
+                    <p>Strong work ethic</p>
+                </div>
+                <div class="soft-skill-item">
+                    <i class="fas fa-comments"></i>
+                    <p>Excellent communication</p>
+                </div>
+                <div class="soft-skill-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Problem solving</p>
+                </div>
+                <div class="soft-skill-item">
+                    <i class="fas fa-users"></i>
+                    <p>Team player</p>
+                </div>
+                <div class="soft-skill-item">
+                    <i class="fas fa-search"></i>
+                    <p>Attention to detail</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    // Check for stored theme preference in localStorage
-    const storedTheme = localStorage.getItem('theme');
-    if (storedTheme) {
-      document.body.classList.add(storedTheme); // Apply stored theme if it exists
-    } else {
-      document.body.classList.add('light-theme'); // Default to light theme
-    }
-  </script>
+    <!-- Certifications Section -->
+    <section class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-item">
+                    <i class="fab fa-aws"></i>
+                    <h3>AWS Certified Solutions Architect Associate</h3>
+                </div>
+                <div class="certification-item">
+                    <i class="fab fa-aws"></i>
+                    <h3>AWS Cloud Practitioner Certified</h3>
+                </div>
+                <div class="certification-item">
+                    <i class="fab fa-aws"></i>
+                    <h3>Cloud Quest Badge - Cloud Practitioner</h3>
+                </div>
+                <div class="certification-item">
+                    <i class="fab fa-aws"></i>
+                    <h3>AWS Amazon Q Generative AI Introduction</h3>
+                </div>
+                <div class="certification-item">
+                    <i class="fab fa-microsoft"></i>
+                    <h3>Introduction to Microsoft Azure Cloud Services</h3>
+                </div>
+                <div class="certification-item">
+                    <i class="fas fa-robot"></i>
+                    <h3>Introduction to Artificial Intelligence IBM</h3>
+                </div>
+                <div class="certification-item">
+                    <i class="fab fa-js"></i>
+                    <h3>Programming Foundations with JavaScript, HTML, and CSS</h3>
+                </div>
+                <div class="certification-item">
+                    <i class="fab fa-python"></i>
+                    <h3>Crash Course on Python: Google</h3>
+                </div>
+                <div class="certification-item">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Analysis with R IBM</h3>
+                </div>
+                <div class="certification-item">
+                    <i class="fas fa-database"></i>
+                    <h3>Big Data Emerging Technologies IBM</h3>
+                </div>
+                <div class="certification-item">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Certificate in IT Essentials: PC Hardware and Software</h3>
+                </div>
+                <div class="certification-item">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Certificate in CCNAv7: Switching, Routing, and Wireless Essentials</h3>
+                </div>
+                <div class="certification-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>API Security Fundamentals APISec University</h3>
+                </div>
+                <div class="certification-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Intro to Cybersecurity Tools & Cyber Attacks IBM</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured <span>Projects</span></h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="digitalsa.png" alt="Funded Digital SA">
+                    </div>
+                    <div class="project-content">
+                        <h3>Funded Digital SA</h3>
+                        <p>A digital solutions provider dedicated to helping individuals and small businesses thrive in the digital world.</p>
+                        <div class="project-tech">
+                            <span>Web Development</span>
+                            <span>AWS</span>
+                        </div>
+                        <a href="https://therencemashego.github.io/Digital-SA/" target="_blank" class="btn">View Project</a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="jenkins.png" alt="Scalable Jenkins on AWS">
+                    </div>
+                    <div class="project-content">
+                        <h3>Scalable Jenkins on AWS</h3>
+                        <p>A scalable and secure Jenkins architecture on AWS with Auto Scaling Group, Load Balancer, and CloudWatch.</p>
+                        <div class="project-tech">
+                            <span>AWS</span>
+                            <span>DevOps</span>
+                            <span>CI/CD</span>
+                        </div>
+                        <a href="https://github.com/TherenceMashego/AWS-Jenkins-Project" target="_blank" class="btn">View Project</a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="jobportal.png" alt="Job Application Portal">
+                    </div>
+                    <div class="project-content">
+                        <h3>Job Application Portal</h3>
+                        <p>A static job application portal built using HTML, CSS, and JavaScript, hosted on AWS S3 with Route 53.</p>
+                        <div class="project-tech">
+                            <span>Web Development</span>
+                            <span>AWS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="https://github.com/TherenceMashego/Job-application-portal-AWS-Hosted" target="_blank" class="btn">View Project</a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="amazonq.png" alt="Amazon Q Gen AI Chatbot">
+                    </div>
+                    <div class="project-content">
+                        <h3>Amazon Q Gen AI Chatbot</h3>
+                        <p>AI-powered chatbot using Amazon Q to assist with Jira, Confluence, and DevOps tools like Jenkins and GitLab.</p>
+                        <div class="project-tech">
+                            <span>AI</span>
+                            <span>AWS</span>
+                            <span>Chatbot</span>
+                        </div>
+                        <a href="https://github.com/TherenceMashego/Amazon-Q-Gen-AI-Chatbot" target="_blank" class="btn">View Project</a>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src=migration.png alt="Jira and Confluence SaaS Migration">
+                    </div>
+                    <div class="project-content">
+                        <h3>Jira and Confluence SaaS Migration</h3>
+                        <p>Migration of Jira and Confluence from AWS to Atlassian Cloud with Azure AD integration for SSO.</p>
+                        <div class="project-tech">
+                            <span>Cloud Migration</span>
+                            <span>Azure AD</span>
+                            <span>AWS</span>
+                        </div>
+                        <a href="https://github.com/TherenceMashego/jira-confluence-saas-migration" target="_blank" class="btn">View Project</a>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="portfolio.jpg" alt="Portfolio Website">
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>Personal portfolio website showcasing professional work, skills, and achievements.</p>
+                        <div class="project-tech">
+                            <span>Web Development</span>
+                            <span>React</span>
+                            <span>Next.js</span>
+                        </div>
+                        <a href="https://github.com/TherenceMashego/Portfolio-Therence-Mashego-cloud-devops" target="_blank" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Work <span>Experience</span></h2>
+            
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - 2024</div>
+                    <div class="timeline-content">
+                        <h3>Cloud Computing Internship</h3>
+                        <h4>Standard Bank SA | Cloud Engineer</h4>
+                        <ul>
+                            <li>Collaborated with senior architects to design and implement cloud-based solutions on AWS and Azure</li>
+                            <li>Contributed to migration projects, assessing on-premises infrastructure and exploring Azure Migrate tool</li>
+                            <li>Conducted reviews of AWS resources for cost optimization</li>
+                            <li>Implemented strategies to reduce cloud expenditure while maintaining operational efficiency</li>
+                            <li>Worked with Linux team to decommission on-premises servers and transition workloads to AWS</li>
+                            <li>Developed monitoring dashboard to track health status and key metrics of AWS tools</li>
+                        </ul>
+                        <div class="reference">
+                            <p><strong>Reference:</strong> Goitsemang Maotoe (0813551195) - Line Manager</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2021 - 2022</div>
+                    <div class="timeline-content">
+                        <h3>Helpdesk Technician</h3>
+                        <h4>TechServ</h4>
+                        <ul>
+                            <li>Assisted VUT students with laptop hardware and software issues</li>
+                            <li>Installed operating systems and programming software</li>
+                            <li>Troubleshot hardware and software issues</li>
+                        </ul>
+                        <div class="reference">
+                            <p><strong>Reference:</strong> X Piyose (0788380922) - Lecturer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2019 - 2020</div>
+                    <div class="timeline-content">
+                        <h3>Administrative Assistant</h3>
+                        <h4>LabRats Internet Cafe</h4>
+                        <ul>
+                            <li>Handled customer queries and data entry</li>
+                            <li>Assisted with Microsoft Word, Excel, and PowerPoint</li>
+                            <li>Managed tax queries and copies</li>
+                        </ul>
+                        <div class="reference">
+                            <p><strong>Reference:</strong> Collen Matamela (0782886646) - Business Partner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>0612137899</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>poiterrence39@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>South Africa</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Therence Mashego</h3>
+                    <p>Cloud Engineer | DevOps Engineer | Software Engineer | Web Developer</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Me</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Therence Mashego. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
