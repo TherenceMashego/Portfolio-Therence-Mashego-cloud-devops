@@ -1,95 +1,92 @@
-// Add fade-out effect on navigation click
-document.querySelectorAll('.navbar a').forEach(link => {
-  link.addEventListener('click', event => {
-    event.preventDefault(); // Prevent immediate navigation
-    const target = event.target.href;
-
-    document.body.classList.add('fade-out'); // Start fade-out animation
-    setTimeout(() => {
-      window.location.href = target; // Navigate after animation
-    }, 1000); // Match this to the CSS fade-out duration
-  });
-});
-
-// Remove fade-in class on page load
-window.addEventListener('load', () => {
-  document.body.classList.remove('fade-in');
-});
-
-
-// Highlight the active tab dynamically
-document.addEventListener("DOMContentLoaded", () => {
-  const navbarLinks = document.querySelectorAll(".navbar a");
-  const currentPage = window.location.pathname.split("/").pop();
-
-  navbarLinks.forEach((link) => {
-    if (link.getAttribute("href") === currentPage) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Navigation
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Sticky navbar on scroll
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        } else {
+            navbar.style.boxShadow = 'none';
+        }
+    });
+    
+    // Form submission
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const subject = this.querySelector('input[type="text"][placeholder="Subject"]').value;
+            const message = this.querySelector('textarea').value;
+            
+            // Here you would typically send the form data to a server
+            // For this example, we'll just show an alert
+            alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
+            
+            // Reset form
+            this.reset();
+        });
     }
-  });
+    
+    // Animation on scroll
+    function animateOnScroll() {
+        const elements = document.querySelectorAll('.skill-category, .project-card, .timeline-item, .certification-item');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+            
+            if (elementPosition < screenPosition) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    }
+    
+    // Set initial state for animated elements
+    document.querySelectorAll('.skill-category, .project-card, .timeline-item, .certification-item').forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+    
+    // Run on load and scroll
+    window.addEventListener('load', animateOnScroll);
+    window.addEventListener('scroll', animateOnScroll);
 });
-
-
-
-
-
-
-// Add event listener to toggle theme
-const themeButton = document.getElementById('theme-toggle');
-themeButton.addEventListener('click', () => {
-  // Toggle between dark and light theme classes
-  document.body.classList.toggle('dark-theme');
-  document.body.classList.toggle('light-theme');
-
-  // Change navbar, footer, and contact bar colors accordingly
-  const navbar = document.querySelector('.navbar');
-  const footer = document.querySelector('footer');
-  const contactBar = document.querySelector('.contact-bar');
-
-  // Update colors based on the theme
-  if (document.body.classList.contains('dark-theme')) {
-    navbar.style.backgroundColor = '#333'; // Dark background for navbar
-    footer.style.backgroundColor = '#333'; // Dark background for footer
-    contactBar.style.backgroundColor = '#333'; // Dark background for contact bar
-    themeButton.textContent = 'Light Theme'; // Change button text
-  } else {
-    navbar.style.backgroundColor = '#fff'; // Light background for navbar
-    footer.style.backgroundColor = '#fff'; // Light background for footer
-    contactBar.style.backgroundColor = '#fff'; // Light background for contact bar
-    themeButton.textContent = 'Dark Theme'; // Change button text
-  }
-
-  // Store the user's theme preference in localStorage
-  const currentTheme = document.body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
-  localStorage.setItem('theme', currentTheme);
-});
-
-
-
-
-
-// Add event listener to toggle theme
-const themeButton = document.getElementById('theme-toggle');
-themeButton.addEventListener('click', () => {
-  document.body.classList.toggle('dark-theme');
-  document.body.classList.toggle('light-theme');
-  themeButton.textContent = document.body.classList.contains('dark-theme') ? 'Light Theme' : 'Dark Theme';
-  localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme');
-});
-
-// Check for stored theme preference in localStorage
-const storedTheme = localStorage.getItem('theme');
-if (storedTheme) {
-  document.body.classList.add(storedTheme);
-} else {
-  document.body.classList.add('light-theme');
-}
-
-
-
-
-
-
-
