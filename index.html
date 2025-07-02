@@ -500,53 +500,97 @@
         }
         
         /* Experience */
-        .experience .timeline-item {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
-        
-        .experience .timeline-date {
-            font-weight: 600;
-            color: var(--primary);
-        }
-        
-        .experience .timeline-content h3 {
-            font-size: 1.3rem;
-            color: var(--dark);
-        }
-        
-        .experience .timeline-content h4 {
-            font-size: 1rem;
-            color: var(--gray);
-            margin-bottom: 15px;
-        }
-        
-        .experience .timeline-content ul {
-            padding-left: 20px;
-            margin-bottom: 15px;
-        }
-        
-        .experience .timeline-content li {
-            position: relative;
-            margin-bottom: 8px;
-            padding-left: 15px;
-        }
-        
-        .experience .timeline-content li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-        }
-        
-        .reference {
-            font-size: 0.9rem;
-            color: var(--gray);
-            margin-top: 15px;
-        }
+       /* Experience Section */
+.experience-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.experience-title h3 {
+    color: var(--dark);
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.experience-title h4 {
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.experience-date {
+    background-color: var(--primary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.experience-details {
+    padding-left: 20px;
+}
+
+.experience-details li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    line-height: 1.5;
+}
+
+.experience-details li i {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.reference {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .experience-header {
+        flex-direction: column;
+    }
+    
+    .experience-date {
+        align-self: flex-start;
+    }
+    
+    .experience-details li {
+        padding-left: 25px;
+    }
+}
         
         /* Contact */
         .contact-content {
@@ -1139,67 +1183,77 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Work <span>Experience</span></h2>
-            
-            <div class="timeline">
-                <!-- Experience 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-date">2023 - 2024</div>
-                    <div class="timeline-content">
-                        <h3>Cloud Computing Internship</h3>
-                        <h4>Standard Bank SA | Cloud Engineer</h4>
-                        <ul>
-                            <li>Collaborated with senior architects to design and implement cloud-based solutions on AWS and Azure</li>
-                            <li>Contributed to migration projects, assessing on-premises infrastructure and exploring Azure Migrate tool</li>
-                            <li>Conducted reviews of AWS resources for cost optimization</li>
-                            <li>Implemented strategies to reduce cloud expenditure while maintaining operational efficiency</li>
-                            <li>Worked with Linux team to decommission on-premises servers and transition workloads to AWS</li>
-                            <li>Developed monitoring dashboard to track health status and key metrics of AWS tools</li>
-                        </ul>
-                        <div class="reference">
-                            <p><strong>Reference:</strong> Goitsemang Maotoe (0813551195) - Line Manager</p>
-                        </div>
+<!-- Experience Section -->
+<section id="experience" class="experience">
+    <div class="container">
+        <h2 class="section-title">Professional <span>Experience</span></h2>
+        
+        <div class="experience-timeline">
+            <!-- Current Position -->
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Junior Developer | Cloud & Web Projects</h3>
+                        <h4>Digital SA</h4>
                     </div>
+                    <div class="experience-date">Apr 2025 – Present</div>
                 </div>
-                
-                <!-- Experience 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-date">2021 - 2022</div>
-                    <div class="timeline-content">
+                <ul class="experience-details">
+                    <li><i class="fas fa-check-circle"></i> Built a scalable Jenkins infrastructure on AWS for CI/CD pipelines</li>
+                    <li><i class="fas fa-check-circle"></i> Handled incident escalation and created technical reports</li>
+                    <li><i class="fas fa-check-circle"></i> Integrated backend services with SQL Server and DynamoDB</li>
+                    <li><i class="fas fa-check-circle"></i> Contributed to system troubleshooting and automation scripts</li>
+                    <li><i class="fas fa-check-circle"></i> Managed project timelines and deliverables</li>
+                </ul>
+            </div>
+
+            <!-- Standard Bank -->
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Cloud & DevOps Engineer Intern</h3>
+                        <h4>Standard Bank SA</h4>
+                    </div>
+                    <div class="experience-date">May 2023 - Oct 2024</div>
+                </div>
+                <ul class="experience-details">
+                    <li><i class="fas fa-check-circle"></i> Designed cloud solutions on AWS and Azure in collaboration with senior architects</li>
+                    <li><i class="fas fa-check-circle"></i> Supported migration projects using Azure Migrate and AWS server decommissioning</li>
+                    <li><i class="fas fa-check-circle"></i> Implemented AWS cost optimization strategies and built monitoring dashboards</li>
+                    <li><i class="fas fa-check-circle"></i> Led the SonarQube upgrade, ensuring improved features and performance</li>
+                    <li><i class="fas fa-check-circle"></i> Assisted in Jira and Confluence upgrades to enhance project management</li>
+                    <li><i class="fas fa-check-circle"></i> Onboarded users to DevOps tools (Bamboo, Jenkins, Nexus, SonarQube)</li>
+                    <li><i class="fas fa-check-circle"></i> Documented upgrade processes and standard procedures in Confluence</li>
+                    <li><i class="fas fa-check-circle"></i> Managed Agile projects using Scrum and Jira, including meeting coordination</li>
+                    <li><i class="fas fa-check-circle"></i> Explored and documented AI tools like Amazon Q to enhance DevOps workflows</li>
+                </ul>
+                <div class="reference">
+                    <p><strong>Reference:</strong> Goitsemang Maotoe (0813551195) - Line Manager</p>
+                </div>
+            </div>
+
+            <!-- TechServ -->
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">
                         <h3>Helpdesk Technician</h3>
                         <h4>TechServ</h4>
-                        <ul>
-                            <li>Assisted VUT students with laptop hardware and software issues</li>
-                            <li>Installed operating systems and programming software</li>
-                            <li>Troubleshot hardware and software issues</li>
-                        </ul>
-                        <div class="reference">
-                            <p><strong>Reference:</strong> X Piyose (0788380922) - Lecturer</p>
-                        </div>
                     </div>
+                    <div class="experience-date">Jan 2021 - Jan 2022</div>
                 </div>
-                
-                <!-- Experience 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-date">2019 - 2020</div>
-                    <div class="timeline-content">
-                        <h3>Administrative Assistant</h3>
-                        <h4>LabRats Internet Cafe</h4>
-                        <ul>
-                            <li>Handled customer queries and data entry</li>
-                            <li>Assisted with Microsoft Word, Excel, and PowerPoint</li>
-                            <li>Managed tax queries and copies</li>
-                        </ul>
-                        <div class="reference">
-                            <p><strong>Reference:</strong> Collen Matamela (0782886646) - Business Partner</p>
-                        </div>
-                    </div>
+                <ul class="experience-details">
+                    <li><i class="fas fa-check-circle"></i> Resolved technical issues (hardware/software/network) for users</li>
+                    <li><i class="fas fa-check-circle"></i> Installed operating systems and configured BIOS/firmware on devices</li>
+                    <li><i class="fas fa-check-circle"></i> Provided remote and in-person technical support</li>
+                    <li><i class="fas fa-check-circle"></i> Troubleshot and resolved various technical issues</li>
+                </ul>
+                <div class="reference">
+                    <p><strong>Reference:</strong> X Piyose (0788380922) - Lecturer</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
